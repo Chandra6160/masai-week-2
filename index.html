@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shift Function</title>
+    <style media="screen">
+
+      .masai
+      {
+          border: 3px black solid;
+          text-align:center;
+          height:50px;
+          width:950px;
+          margin-left:180px;
+          font-size: larger;
+          font-style: italic;
+
+      }
+      .keys
+      {
+
+
+
+      }
+      .keya
+      {
+        height:50px;
+        width:75px;
+        border:1px black solid;
+        background-color:black;
+        color:white;
+      }
+      #a{
+        float: right;
+        margin-top:-15px
+      }
+      .keysAlpha
+      {
+        height:50px;
+        width:50px;
+        border:1px black solid;
+        background-color:black;
+        color:white;
+      }
+
+
+    </style>
+  </head>
+  <body background="/home/chandrashekhar/repos/masai-week2/10.png">
+
+
+          <input type="text" id= "key" class="masai"/>
+
+
+
+    </div>
+    <div class="keys" >
+      <table style="margin-left: 217px;">
+        <tr>
+
+
+
+          <td >
+
+          <button   class="keya" onclick="keyA('1')" id="button1" value="1" >
+            <span  style=" ">1</span>
+            <span id="a" style="">!</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyA('2')" id="button2" value="2"   >
+            <span  style=" ">2</span>
+            <span id="a" style="">@</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyA('3')" id="button3" value="3"  >
+            <span  style=" ">3</span>
+            <span id="a" style="">#</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyA('4')" id="button4" value="4"  >
+            <span  style=" ">4</span>
+            <span id="a" style="">$</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyA('5')" id="button5" value="5" >
+            <span  style=" ">5</span>
+            <span id="a" style="">%</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyA('6')" id="button6" value="6"  >
+            <span  style=" ">6</span>
+            <span id="a" style="">^</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyA('7')" id="button7" value="7"  >
+            <span  style=" ">7</span>
+            <span id="a" style="">&</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyA('8')" id="button8" value="8"  >
+            <span  style=" ">8</span>
+            <span id="a" style="">*</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyA('9')" id="button9" value="9"  >
+            <span  style=" ">9</span>
+            <span id="a" style="">(</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyA('0')" id="button0" value="0"  >
+            <span  style=" ">0</span>
+            <span id="a" style="">)</span>
+          </button>
+          </td>
+          <td >
+
+          <button   class="keya" onclick="keyDel()" id="buttonDel" value=" " >
+            <span  style=" ">DEL</span>
+
+          </button>
+          </td>
+
+        </tr>
+
+
+
+      </table>
+
+    </div>
+
+    <div class="keysAlpha" style="border:1px white solid;height:56px;width:1071px;background-color:white;margin-left:266px">
+
+      <table style="">
+        <tr>
+          <td >
+          <button   class="keya" onclick="keyA('q')" id="buttonQ" value="q" >
+            <span  style=" ">Q</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('w')" id="buttonW" value="w"  >
+            <span  style=" ">W</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('e')" id="buttonE" value="e" >
+            <span  style=" ">E</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('r')" id="buttonR" value="r" >
+            <span  style=" ">R</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('t')" id="buttonT" value="t" >
+            <span  style=" ">T</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('y')" id="buttonY" value="y"  >
+            <span  style=" ">Y</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('u')" id="buttonU" value="u"  >
+            <span  style=" ">U</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('i')" id="buttonI" value="i"  >
+            <span  style=" ">I</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('o')" id="buttonO" value="o" >
+            <span  style=" ">O</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('p')" id="buttonP" value="p"  >
+            <span  style=" ">P</span>
+          </button>
+          </td>
+
+
+
+        </tr>
+        </table>
+    </div>
+    <div class="keysAlpha" style="border:1px white solid;height:56px;width:1071px;background-color:white;margin-left:315px">
+
+      <table style="">
+        <tr>
+          <td >
+          <button   class="keya" onclick="keyA('a')" id="buttonA" value="a"  >
+            <span  style=" ">A</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('s')" id="buttonS" value="s"  >
+            <span  style=" ">S</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('d')" id="buttonD" value="d" >
+            <span  style=" ">D</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('f')" id="buttonF" value="f" >
+            <span  style=" ">F</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('g')" id="buttonG" value="g"  >
+            <span  style=" ">G</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('h')" id="buttonH" value="h" >
+            <span  style=" ">H</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('j')" id="buttonJ" value="j"  >
+            <span  style=" ">J</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('k')" id="buttonK" value="k"  >
+            <span  style=" ">K</span>
+          </button>
+          </td>
+          <td >
+          <button    class="keya" onclick="keyA('l')" id="buttonL" value="l" >
+            <span  style=" ">L</span>
+          </button>
+          </td>
+
+
+
+
+        </tr>
+        </table>
+    </div>
+    <div class="keysAlpha" onclick="keyA(' ')" value=" " style="border:1px white solid;height:56px;width:1071px;background-color:white;margin-left:355px">
+
+      <table style="">
+        <tr>
+          <td >
+          <button   class="keya" onclick="keyA('z')" id="buttonZ" value="z"  >
+            <span  style=" ">Z</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('x')" id="buttonX" value="x"  >
+            <span  style=" ">X</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('c')" id="buttonC" value="c"  >
+            <span  style=" ">C</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('v')" id="buttonV" value="v"  >
+            <span  style=" ">V</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('b')" id="buttonB" value="b" >
+            <span  style=" ">B</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('n')" id="buttonN" value="n"  >
+            <span  style=" ">N</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('m')" id="buttonM" value="m"  >
+            <span  style=" ">M</span>
+          </button>
+          </td>
+          <td >
+          <button   class="keya" onclick="keyA('.com')" id="buttonCom" value=".com" >
+            <span  style=" ">.com</span>
+          </button>
+          </td>
+        </tr>
+        </table>
+    </div>
+    <div class="" style="border:1px white solid;height:56px;width:512px;background-color:black;margin-left:415px">
+
+    </div>
+    <div class="" style="border:1px white solid;height:56px;width:800px;background-color:white;margin-left:425px">
+      <table>
+        <tr>
+          <td>
+            <button   class="keya" onclick="keyA()" id="buttonCaps" style="background-color:white"  >
+              <span  style="color:black ">CAPS</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="shift()" id="buttonShift" style="background-color:white" >
+              <span  style="color:black " >SHIFT</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="keyA()" id="buttonPass" style="background-color:white"  >
+              <span  style="color:black ">PASSWD</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="keyA()" id="buttonClean" style="background-color:white"  >
+              <span  style="color:black ">CLEAN</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="keyA()" id="buttonReverse" style="background-color:white"  >
+              <span  style="color:black ">REV</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+    <div class="" style="border:1px white solid;height:56px;width:800px;background-color:white;margin-left:425px">
+      <table>
+        <tr>
+          <td>
+            <button   class="keya" onclick="keyA()" id="buttonCaps1" style="background-color:white"  >
+              <span  style="color:black ">CAPS</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="keyA()" id="buttonShift1" style="background-color:white" >
+              <span  style="color:black " id="shiftGreen">SHIFT</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="keyA()" id="buttonPass1" style="background-color:white"  >
+              <span  style="color:black ">PASSWD</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="keyA()" id="buttonClean1" style="background-color:white"  >
+              <span  style="color:black ">CLEAN</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="keyA()" id="buttonReverse1" style="background-color:white"  >
+              <span  style="color:black ">REV</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+
+      function keyA(val)
+      {
+
+        document.getElementById('key').value += val
+      
+        document.getElementById('buttonShift').style.background="white"
+
+
+      }
+      function shift()
+      {
+
+
+          document.getElementById('buttonShift').style.background="green"
+          var s = document.getElementById('key').value;
+          s.toUpperCase();
+
+
+
+      }
+
+
+
+    </script>
+
+
+  </body>
+</html>
