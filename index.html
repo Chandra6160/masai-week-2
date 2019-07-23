@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Shift Function</title>
+    <title>Typewriter</title>
     <style media="screen">
 
       .masai
@@ -14,12 +14,6 @@
           margin-left:180px;
           font-size: larger;
           font-style: italic;
-
-      }
-      .keys
-      {
-
-
 
       }
       .keya
@@ -46,7 +40,7 @@
 
     </style>
   </head>
-  <body background="/home/chandrashekhar/repos/masai-week2/10.png">
+  <body background="10.png">
 
 
           <input type="text" id= "key" class="masai"/>
@@ -255,14 +249,10 @@
             <span  style=" ">L</span>
           </button>
           </td>
-
-
-
-
         </tr>
         </table>
     </div>
-    <div class="keysAlpha" onclick="keyA(' ')" value=" " style="border:1px white solid;height:56px;width:1071px;background-color:white;margin-left:355px">
+    <div class="keysAlpha"  value=" " style="border:1px white solid;height:56px;width:1071px;background-color:white;margin-left:355px">
 
       <table style="">
         <tr>
@@ -309,14 +299,21 @@
         </tr>
         </table>
     </div>
-    <div class="" style="border:1px white solid;height:56px;width:512px;background-color:black;margin-left:415px">
-
+    <div class="" style="">
+      <button   class="keya" onclick="keySpace()" id="buttonSpace" style="border:1px white solid;height:56px;width:512px;background-color:black;margin-left:415px"  >
+        <span  style="color:white ">SPACE</span>
+      </button>
     </div>
     <div class="" style="border:1px white solid;height:56px;width:800px;background-color:white;margin-left:425px">
       <table>
         <tr>
           <td>
-            <button   class="keya" onclick="keyA()" id="buttonCaps" style="background-color:white"  >
+            <button   class="keya" onclick="" id="off" style="background-color:white"  >
+              <span  style="color:green">ON</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="keyCaps()" id="buttonCaps" style="background-color:white"  >
               <span  style="color:black ">CAPS</span>
             </button>
           </td>
@@ -326,17 +323,17 @@
             </button>
           </td>
           <td>
-            <button   class="keya" onclick="keyA()" id="buttonPass" style="background-color:white"  >
+            <button   class="keya" onclick="keyPass()" id="buttonPass" style="background-color:white"  >
               <span  style="color:black ">PASSWD</span>
             </button>
           </td>
           <td>
-            <button   class="keya" onclick="keyA()" id="buttonClean" style="background-color:white"  >
+            <button   class="keya" onclick="keyClean()" id="buttonClean" style="background-color:white"  >
               <span  style="color:black ">CLEAN</span>
             </button>
           </td>
           <td>
-            <button   class="keya" onclick="keyA()" id="buttonReverse" style="background-color:white"  >
+            <button   class="keya" onclick="keyReverse()" id="buttonReverse" style="background-color:white"  >
               <span  style="color:black ">REV</span>
             </button>
           </td>
@@ -348,27 +345,32 @@
       <table>
         <tr>
           <td>
-            <button   class="keya" onclick="keyA()" id="buttonCaps1" style="background-color:white"  >
+            <button   class="keya" onclick="" id="off" style="background-color:white"  >
+              <span  style="color:red ">OFF</span>
+            </button>
+          </td>
+          <td>
+            <button   class="keya" onclick="keyCaps1()" id="buttonCaps1" style="background-color:white"  >
               <span  style="color:black ">CAPS</span>
             </button>
           </td>
           <td>
-            <button   class="keya" onclick="keyA()" id="buttonShift1" style="background-color:white" >
+            <button   class="keya" onclick="keyShift1()" id="buttonShift1" style="background-color:white" >
               <span  style="color:black " id="shiftGreen">SHIFT</span>
             </button>
           </td>
           <td>
-            <button   class="keya" onclick="keyA()" id="buttonPass1" style="background-color:white"  >
+            <button   class="keya" onclick="keyPass1()" id="buttonPass1" style="background-color:white"  >
               <span  style="color:black ">PASSWD</span>
             </button>
           </td>
           <td>
-            <button   class="keya" onclick="keyA()" id="buttonClean1" style="background-color:white"  >
+            <button   class="keya" onclick="keyClean1()" id="buttonClean1" style="background-color:white"  >
               <span  style="color:black ">CLEAN</span>
             </button>
           </td>
           <td>
-            <button   class="keya" onclick="keyA()" id="buttonReverse1" style="background-color:white"  >
+            <button   class="keya" onclick="keyReverse1()" id="buttonReverse1" style="background-color:white"  >
               <span  style="color:black ">REV</span>
             </button>
           </td>
@@ -380,30 +382,161 @@
 
 
     <script type="text/javascript">
+    var shift,reverse,pass,clean,caps;
+    function keyA(val)
+        {
+          if(shift==true)
+            {
+              switch (val) {
+                case '9':document.getElementById("key").value+="("
+                          break;
+                case '8':document.getElementById("key").value+="*"
+                          break;
+                case '7':document.getElementById("key").value+="&"
+                          break;
+                case '6':document.getElementById("key").value+="^"
+                        break;
+                case '5':document.getElementById("key").value+="%"
+                        break;
+                case '4':document.getElementById("key").value+="$"
+                      break;
+                case '3':document.getElementById("key").value+="#"
+                        break;
+                case '2':document.getElementById("key").value+="@"
+                          break;
+                case '1':document.getElementById("key").value+="!"
+                          break;
+                case '0':document.getElementById("key").value+=")"
+                        break;
+                default:
 
-      function keyA(val)
-      {
-
-        document.getElementById('key').value += val
-      
-        document.getElementById('buttonShift').style.background="white"
+              }
 
 
-      }
+            }
+            else
+            {
+              shift=false
+              document.getElementById("key").value+=val;
+            }
+
+            var input=document.getElementById('key').value;
+            var alpha=""
+            alpha+=input
+            var pwd="*"
+
+            // console.log(input);
+            if(pass==true)
+            {
+              shift=true
+              document.getElementById('key').value+=pwd
+            }
+            if(caps==true)
+            {
+              document.getElementById('key').value=""
+              document.getElementById('key').value+=alpha.toUpperCase()
+
+              console.log(alpha.toUpperCase());
+            }
+            if(reverse==true)
+            {
+              var rev =document.getElementById('key').value;
+      			  document.getElementById('key').value=""
+          		for (var i=rev.length-1;i>=0;i--)
+          		{
+          			document.getElementById('key').value+=rev[i]
+              }
+            }
+
+
+            var first,last;
+            var star=""
+            if(clean==true)
+            {
+              if(input=="chan" || input =="shit")
+              {
+                document.getElementById('key').value=""
+                for(var i=0;i<input.length;i++)
+                {
+                  if(input[0]||input[input.length-1])
+                  {
+                    first=input[0]
+                    last=input[input.length-1]
+                  }
+                  if( i>0  && i< input.length-1 )
+                  {
+                    star+="*"
+                  }
+                }
+                document.getElementById("key").value +=first+star+last
+              }
+            }
+
+        }
+          function keyDel()
+            {
+                var strng=document.getElementById("key").value;
+                document.getElementById("key").value=strng.substring(0,strng.length-1)
+            }
+            function keySpace()
+            {
+              document.getElementById("key").value+=" "
+            }
+
       function shift()
       {
 
-
-          document.getElementById('buttonShift').style.background="green"
-          var s = document.getElementById('key').value;
-          s.toUpperCase();
-
-
+          shift=true;
+          document.getElementById('buttonShift').style.background = "green"
 
       }
+      function keyShift1()
+      {
+        shift=false;
+        document.getElementById('buttonShift').style.background = "white"
 
+      }
+      function keyReverse1()
+      {
+        reverse=false;
+        document.getElementById('buttonReverse').style.background = "white"
 
-
+      }
+      function keyReverse()
+      {
+        reverse=true;
+        document.getElementById('buttonReverse').style.background = "green"
+      }
+      function keyPass1()
+      {
+        pass=false;
+        document.getElementById('buttonPass').style.background = "white"
+      }
+      function keyPass()
+      {
+         pass=true;
+         document.getElementById('buttonPass').style.background = "green"
+      }
+      function keyClean1()
+      {
+         clean=false;
+         document.getElementById('buttonClean').style.background = "white"
+      }
+      function keyClean()
+      {
+         clean=true;
+         document.getElementById('buttonClean').style.background = "green"
+      }
+      function keyCaps()
+      {
+          caps=true;
+          document.getElementById('buttonCaps').style.background = "green"
+      }
+      function keyCaps1()
+      {
+          caps=false;
+          document.getElementById('buttonCaps').style.background = "white"
+      }
     </script>
 
 
